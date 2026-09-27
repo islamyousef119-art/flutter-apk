@@ -1,0 +1,22 @@
+# Production checklist
+
+- [x] Customer / Driver / Owner flows
+- [x] Restaurant catalogue / menu / cart
+- [x] Order lifecycle UI
+- [x] Firestore transaction for first-driver acceptance
+- [x] Maps markers + route service
+- [x] Firebase auth scaffold + Google sign-in
+- [x] FCM initialization scaffold
+- [x] Firestore security rules
+- [x] Owner dashboard foundation
+- [ ] Firebase project credentials / google-services.json
+- [ ] Android manifest Maps key
+- [ ] Cloud Functions for dispatch, notifications, cleanup and claims
+- [ ] Real driver GPS background tracking
+- [ ] Push notification topics/token management
+- [ ] Payment gateway integration
+- [ ] Restaurant onboarding/inventory UI
+- [ ] Coupons and commissions backend
+- [ ] Ratings/reviews backend
+- [ ] Production analytics/crash reporting
+- [ ] Release signing and Play Store AAB
