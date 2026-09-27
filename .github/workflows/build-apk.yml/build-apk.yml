@@ -20,14 +20,15 @@ jobs:
           channel: stable
           cache: true
 
-      - name: Install dependencies
-        run: flutter pub get
+      - name: Create Flutter project
+        run: flutter create hello_flutter
 
       - name: Build APK
+        working-directory: hello_flutter
         run: flutter build apk --release
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: flutter-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          name: hello-flutter-apk
+          path: hello_flutter/build/app/outputs/flutter-apk/app-release.apk
