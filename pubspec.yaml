@@ -1,0 +1,23 @@
+name: nova_delivery_pro
+description: Premium Arabic delivery app UI and local business logic.
+publish_to: 'none'
+version: 3.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  google_maps_flutter: ^2.13.1
+  geolocator: ^14.0.2
+  shared_preferences: ^2.5.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
