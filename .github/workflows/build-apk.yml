@@ -1,22 +1,36 @@
-name: Build Nova Delivery APK
+name: Build Nova APK
+
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches:
+      - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: subosito/flutter-action@v2
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
         with:
           channel: stable
           cache: true
-      - run: flutter create .
-      - run: flutter pub get
-      - run: flutter build apk --release
-      - uses: actions/upload-artifact@v4
+
+      - name: Create Android project files
+        run: flutter create .
+
+      - name: Get dependencies
+        run: flutter pub get
+
+      - name: Build Release APK
+        run: flutter build apk --release
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
         with:
-          name: nova-delivery-v3-apk
+          name: nova-delivery-apk
           path: build/app/outputs/flutter-apk/app-release.apk
-          
